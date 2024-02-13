@@ -1,4 +1,6 @@
 # AirBnB_clone
+<img src="https://github.com/Adeniyii/AirBnB_clone/blob/main/assets/hbnb_logo.png?raw=true">
+
 ## Description 🏷️
 HolbertonBnB is a complete web application, integrating database storage, a back-end API, and front-end interface in a clone of AirBnB.
 
@@ -59,10 +61,12 @@ $
 ```
 ## Testing 📏
 Unittests for the HolbertonBnB project are defined in the tests folder. To run the entire test suite simultaneously, execute the following command:
-
+```
 $ python3 unittest -m discover tests
+```
 Alternatively, you can specify a single test file to run at a time:
-
+```
 $ python3 unittest -m tests/test_console.py
+```
 ## Authors ✒️
 Abdallah Gamal <abdallahgamal840@gmail.com>
