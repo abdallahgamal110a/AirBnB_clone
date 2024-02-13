@@ -1,13 +1,19 @@
 #!usr/bin/python3
-"""Defines unittests for models/base_model.py."""
+"""Testing the `base_model` module."""
+import json
+import os
+import time
 import unittest
+import uuid
+import datetime
 from models.base_model import BaseModel
+from models.engine.file_storage import FileStorage
 
 class TestBaseModel(unittest.TestCase):
 
-    def test_save(self):
-        pass
-
+    """Test cases for the `Base` class.
+    """
+    pass
 
 if __name__ == "__main__":
     unittest.main()
