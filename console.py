@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-    Main Console program
-"""
+"""Main Console program"""
 import cmd
 import re
 import json
