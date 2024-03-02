@@ -33,7 +33,7 @@ class BaseModel:
         models.storage.new(self)
 
     def __str__(self):
-        """funcation return string
+        """function return string
 
         Returns:
             str: [<class name>] (<self.id>) <self.__dict__>_description_
