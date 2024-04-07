@@ -12,7 +12,8 @@ class BaseModel:
         self.updated_at = datetime.datetime.now().isoformat()
 
     def __str__(self):
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id,
+                                     self.__dict__)
 
     def save(self):
         self.updated_at = datetime.datetime.now().isoformat()
@@ -27,5 +28,4 @@ class BaseModel:
             else:
                 my_dict[key] = value
         my_dict["__class__"] = self.__class__.__name__
-
         return my_dict
