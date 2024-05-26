@@ -4,8 +4,14 @@ import unittest
 
 
 class Test_Base_model(unittest.TestCase):
+    """
+    Tests attributes of the base model
+    """
 
     def setUp(self):
+        """
+        Classes needed for testing
+        """
         self.a = 10
         self.b = 20
 
@@ -14,3 +20,6 @@ class Test_Base_model(unittest.TestCase):
         self.b = None
 
     
+
+if __name__ == "__main__":
+    unittest.main()
