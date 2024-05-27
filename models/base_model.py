@@ -21,7 +21,7 @@ class BaseModel:
 
     """
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """Public instance artributes initialization
         after creation
 
@@ -29,9 +29,16 @@ class BaseModel:
             *args(args): arguments
             **kwargs(dict): attrubute values
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs:
+            for key, value in kwargs.items():
+                if key == 'created_at' or key == 'updated_at':
+                    value = datetime.fromisoformat(value)
+                if key != '__class__':
+                    setattr(self, key, value)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """
@@ -53,7 +60,7 @@ class BaseModel:
         keys/values of __dict__ instance
         """
         copy_dict = self.__dict__.copy()
-        copy_dict['created_at'] = self.created_at.isoformat()
-        copy_dict['updated_at'] = self.updated_at.isoformat()
-        copy_dict['__class__'] = self.__class__.__name__
+        copy_dict["created_at"] = self.created_at.isoformat()
+        copy_dict["updated_at"] = self.updated_at.isoformat()
+        copy_dict["__class__"] = self.__class__.__name__
         return copy_dict
