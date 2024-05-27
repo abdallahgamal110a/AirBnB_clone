@@ -33,14 +33,14 @@ class TestBasemodel(unittest.TestCase):
             datetime.fromisoformat(self.model.created_at)
         except ValueError:
             self.fail("'created_at' is not in ISO format")
-            
+
     def test_update_at(self):
         """Test if 'updated_at' is a string in ISO format"""
         try:
             datetime.fromisoformat(self.model.updated_at)
         except ValueError:
             self.fail("'updated_at' is not in ISO format")
-            
+
     def test_str_method(self):
         """Test the __str__ method"""
         str_rep = str(self.model)
@@ -69,6 +69,7 @@ class TestBasemodel(unittest.TestCase):
         self.assertEqual(model_dict["id"], self.model.id)
         self.assertEqual(model_dict["created_at"], self.model.created_at)
         self.assertEqual(model_dict["updated_at"], self.model.updated_at)
+
 
 if __name__ == "__main__":
     unittest.main()
