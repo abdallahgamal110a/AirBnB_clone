@@ -1,18 +1,11 @@
 #!/usr/bin/python3
-"""The `city` module
+"""This module creates a User class"""
 
-It defines one class, `City(),
-which sub-classes the `BaseModel()` class.`
-"""
 from models.base_model import BaseModel
 
 
 class City(BaseModel):
-    """A city in the application.
+    """Class for managing city objects"""
 
-    Attributes:
-        name
-        state_id
-    """
-    name = ""
     state_id = ""
+    name = ""

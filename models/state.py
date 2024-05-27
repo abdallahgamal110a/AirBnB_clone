@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-"""The `state` module
+"""This module creates a User class"""
 
-It defines one class, `State(),
-which sub-classes the `BaseModel()` class.`
-"""
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """A state in the application.
+    """Class for managing state objects"""
 
-    Attributes:
-        name
-    """
     name = ""
